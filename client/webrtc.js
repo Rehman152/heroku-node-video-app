@@ -47,7 +47,6 @@ loginBtn.addEventListener("click", function (event) {
         name: name 
      }); 
   } 
- 
 });
 
 
