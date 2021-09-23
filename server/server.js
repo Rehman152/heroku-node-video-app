@@ -6,10 +6,10 @@ const WebSocket = require('ws');
 const WebSocketServer = WebSocket.Server;
 
 // Yes, TLS is required
-const serverConfig = {
-   key: fs.readFileSync('key.pem'),
-   cert: fs.readFileSync('cert.pem'),
-};
+// const serverConfig = {
+//    key: fs.readFileSync('key.pem'),
+//    cert: fs.readFileSync('cert.pem'),
+// };
 
 //all connected to the server users 
 var users = {};
@@ -30,7 +30,7 @@ const handleRequest = function(request, response) {
   }
 };
 
-const httpsServer = http.createServer(serverConfig, handleRequest);
+const httpsServer = http.createServer(handleRequest);
 httpsServer.listen(PORT, '0.0.0.0');
 
 // ----------------------------------------------------------------------------------------
